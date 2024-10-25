@@ -1,0 +1,82 @@
+.ambala-section{
+    padding-top: 0px;
+    padding-bottom: 2.5rem !important;
+}
+.top{
+    padding-top: 2.5rem;
+}
+
+.vision-mission-img{
+    height: 450px !important;
+    width: 600px !important;
+}
+
+
+/* mobile responsive */
+@media (max-width: 576px) {
+    .ambala-section{
+        padding-top: 0px;
+        padding-bottom: 1.5rem !important;
+    }
+    .top{
+        padding-top: 1.5rem;
+    }
+    .vision-mission-img{
+        height: 300px !important;
+        width: 400px !important;
+    }
+    .tab-content img {
+        width: 100% !important;
+        height: 230px !important;
+        object-fit: cover;
+    }
+    .career-top{
+        padding-top: 1.5rem;
+    }
+    .value-box-1{
+        padding-bottom: 1.5rem !important;
+    }
+    .logo-container {
+        position: absolute;
+        bottom: 7px !important;
+        left: 7px !important;
+        width: 40px;
+        height: 40px;
+        z-index: 10;
+        border: 0.1px solid #6e0404;
+    }
+    .product-banner-wrapper {
+        padding-top: 20px;
+        position: relative;
+        width: 100%;
+        /* height: 450px !important; */
+        overflow: hidden;
+    }
+
+    .floating-2{
+        display:none !important;
+    }
+    .hero-section {
+        padding: 100px 0;
+        width: 100%;
+        height: 60rem !important;
+        display: flex;
+        align-items: center;
+    }
+
+}
+/* tab responsive mood */
+@media (max-width: 768px) {
+    .logo-container {
+        position: absolute;
+        bottom: 12px !important;
+        left: 12px !important;
+        width: 70px;
+        height: 70px;
+        z-index: 10;
+        border: 0.1px solid #6e0404;
+    }
+}
+ol, ul {
+    padding-left: 1rem !important;
+}

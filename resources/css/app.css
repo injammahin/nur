@@ -1,0 +1,465 @@
+
+/* Add your CSS styles here */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(14, 29, 51, 0.2), rgba(14, 29, 51, 0.8));
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.caption {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+    transition: all .2s ease;
+}
+
+.flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+}
+
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.flickity-page-dots {
+    bottom: 30px;
+}
+
+.flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: #ff0000;
+    border: 0 solid #ff0000;
+}
+
+.slide-content .title,
+.slide-content .caption,
+.slide-content .btn {
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.slide-content.mask .mask {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-content.mask .title {
+    animation-duration: 0.4s;
+    animation-delay: 0.7s;
+    animation-name: slide-up;
+    animation-fill-mode: backwards;
+    opacity: 1;
+    font-size: 30px;
+    color: var(--bs-white) !important;
+}
+
+.slide-content.mask .divider {
+    display: inline-block;
+    position: relative;
+    margin: 5px auto;
+    height: 2px;
+    width: 60%;
+    background-color: #d31c1c;
+    animation: divider-mask 1s 0.3s both;
+}
+
+.slide-content.mask .caption,
+.slide-content.mask .btn {
+    animation-duration: 0.4s;
+    animation-delay: 0.7s;
+    animation-name: slide-down;
+    font-size: 1.7rem;
+    color: #dbd2d2;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes divider-mask {
+
+    0%,
+    100% {
+        transform: scaleX(0);
+    }
+
+    40%,
+    60% {
+        transform: scaleX(1);
+    }
+}
+
+/* Header CSS */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar-custom.scrolled,
+header:hover .navbar-custom {
+    background-color: transparent;
+
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar-custom.scrolled .navbar-nav .nav-link,
+header:hover .navbar-custom .navbar-nav .nav-link {
+    color: rgb(223, 15, 15);
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 21px 0.5rem;
+    letter-spacing: 0.5px;
+    transition-duration: 500ms;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-custom.scrolled .navbar-nav .nav-link:hover,
+header:hover .navbar-custom .navbar-nav .nav-link:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Add your CSS styles here */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(14, 29, 51, 0.2), rgba(14, 29, 51, 0.8));
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.caption {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #ffffff;
+    transition: all .2s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar-nav>li.has-sub>a:hover {
+    color: yellow;
+    text-decoration: none !important;
+    opacity: 1;
+}
+
+
+.navbar-nav>li>a:hover {
+    color: yellow;
+    text-decoration: none !important;
+    opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+    .scrollHeader .navbar-nav>li.has-sub>a {
+        color: black;
+    }
+
+    .scrollHeader .navbar-nav>li.has-sub>a:hover {
+        color: #dc3545;
+    }
+
+    .scrollHeader .navbar-nav>li>a {
+        color: black;
+    }
+
+    .scrollHeader .navbar-nav>li>a:hover {
+        color: #dc3545;
+    }
+}
+
+.flickity-prev-next-button {
+    width: 80px;
+    height: 80px;
+    background: transparent;
+}
+
+.flickity-prev-next-button:hover {
+    background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.flickity-page-dots {
+    bottom: 30px;
+}
+
+.flickity-page-dots .dot {
+    width: 30px;
+    height: 4px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border: 0 solid white;
+    border-radius: 0;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: #ff0000;
+    border: 0 solid #ff0000;
+}
+
+.slide-content .title,
+.slide-content .caption,
+.slide-content .btn {
+    position: relative;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.slide-content.mask .mask {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-content.mask .title {
+    animation-duration: 0.4s;
+    animation-delay: 0.7s;
+    animation-name: slide-up;
+    animation-fill-mode: backwards;
+    opacity: 1;
+}
+
+.slide-content.mask .divider {
+    display: inline-block;
+    position: relative;
+    margin: 5px auto;
+    height: 2px;
+    width: 60%;
+    background-color: #d31c1c;
+    animation: divider-mask 1s 0.3s both;
+}
+
+.slide-content.mask .caption,
+.slide-content.mask .btn {
+    animation-duration: 0.4s;
+    animation-delay: 0.7s;
+    animation-name: slide-down;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes divider-mask {
+
+    0%,
+    100% {
+        transform: scaleX(0);
+    }
+
+    40%,
+    60% {
+        transform: scaleX(1);
+    }
+}
+
+.navbar>ul>li.has-sub>a:after {
+    position: absolute;
+    top: 30px;
+    right: -8px;
+    content: "";
+    border-color: transparent var(--bs-body-bg) var(--bs-light-bg-subtle) transparent;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    display: block;
+    height: 6px;
+    transform: rotate(45deg);
+    transition: border 0.3s ease 0s;
+    width: 6px;
+}
