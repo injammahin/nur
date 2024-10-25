@@ -1,11 +1,11 @@
 @extends('backend.app')
 
 @section('content')
-    <div class="container pt-5">
+    <div id="app" class="content-wrapper p-5 mt-5">
         <!-- About Content Section -->
         <main>
-            <div id="app" class="content-wrapper">
-                <div class="row mt-5">
+            <div >
+                <div class="row ">
                     <div class="col-md-12">
                         <h2>About Us Content</h2>
                         <div class="card">
